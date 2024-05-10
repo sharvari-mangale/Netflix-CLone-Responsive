@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign In</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+       
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            
+        }
+    
+        .content {
+            text-align: center;
+        }
+    
+        .content h2 {
+            color: #333;
+        }
+    
+        .content h3 {
+            color: #333;
+            margin-top: 10px;
+        }
+    
+        .content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    
+        .content form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+    
+        .form-content label {
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+    
+        .form-content input {
+            width: 27%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    
+        .content a {
+            color: #0073e6;
+            text-decoration: none;
+            margin-bottom: 20px;
+            text-align: left;
+            display: block;
+        }
+    
+        .content button {
+            padding: 10px 20px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .content button:hover {
+            background-color: #cc0c0c;
+        }
+
+        nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background:transparent;
+    border:  1px solid #fff;
+    padding: 7px 10px;
+
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+        
+    </style>
+</head>
+<body>
+
+
+    <nav>
+        <img src="./images/logo (1).png" class="logo">
+        <div>
+          <button class="language-btn">English<img src="./images/down-icon.png"></button>
+          <button >Sign In</button>
+        </div>
+      </nav>
+
+
+    <div class="container">
+        <div class="content">
+            
+            <h1>Welcome!</h1>
+            <h1>Joining Netflix is easy.</h1>
+            <p> Enter your password and you'll be watching in no time.</p>
+            <form action="homepage.html" class="form-content">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="" required >
+                <label for="password">Enter your password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <a href="#">Forgot your password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signInForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+           
+            var email = document.getElementById("email").value;
+
+            window.location.href = "getStarted.html?email=" + encodeURIComponent(email);
+        });
+    </script>
+
+</body>
+</html>
+
